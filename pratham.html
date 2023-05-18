@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is description">
+    <meta name="keywords" content="html, css, web development">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>Demo</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Universal selector */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Element selector */
+        p {
+            border: 2px solid red;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 33px;
+            /* 1/96th of an inch */
+            line-height: 1.2em;
+            font-weight: bold;
+            font-style: italic;
+            /* we can set martgin/padding for top, bottom, right, left like this */
+            /* padding-top: 23px; */
+            /* padding-bottom: 45px; */
+            /* padding-left: 87px; */
+            /* padding-right: 65px; */
+
+            /* padding/margin = top right bottom left; */
+            /* padding: 34px 73px 52px 13px */
+
+            /* padding: y(top/bottom) x(left/right); */
+            padding: 53px 98px;
+            margin: 80px 24px;
+            border-radius: 12px;
+            width: 342px;
+
+        }
+
+        /* Id selector */
+        #secondPara {
+            clear: both;
+            color: black;
+            /*Color by name*/
+            background-color: blueviolet !important;
+            border-bottom: 2px solid rgb(234, 124, blue);
+            border-top: 2px solid crimson;
+            border-left: 2px solid darkblue;
+            border-right: 2px solid tan;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 14px;
+            border-bottom-right-radius: 24px;
+            border-bottom-left-radius: 34px;
+        }
+
+        /* Class selector */
+        .bgBlue {
+            float: left;
+            width: 48%;
+            color: rgb(0, 145, 087);
+            /*Color by rgb value*/
+            background-color: #ff88ff;
+            /*Color by hex value*/
+            height: 100px;
+            width: 455px;
+            border: 4px solid blue;
+            border-radius: 11px;
+            text-align: center;
+        }
+
+        /* Grouping selector */
+        footer,
+        span {
+            float: right;
+            width: 48%;
+            height: 400px;
+            width: 500px;
+            background-image: url('https://www.mobilesmspk.net/user/images/upload_images/2020/02/1/www.mobilesmspk.net_purple-tree-image-1.jpg');
+            border: 2px solid blue;
+            background-repeat: no-repeat;
+            /* repeat-x & repeat-y will make it repeat on x & y axis */
+            /* background-position: 239px 96px; */
+            /* background-position: center top; */
+            background-position: center center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .btn:hover {
+            color: blue;
+            background-color: yellow;
+            border: 2px solid black;
+        }
+
+        a:visited {
+            color: aqua;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        .btn {
+            background-color: blue;
+            padding: 45px;
+            border: darkcyan;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 4px;
+        }
+
+        .navbar {
+            background-color: black;
+            border-radius: 4px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 14px 20px;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar li a:hover {
+            color: red;
+        }
+
+        .search {
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 4px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+
+        header {
+            margin: auto;
+            border: 2px solid red;
+            width: 15%;
+        }
+
+        img {
+            margin: auto;
+            display: block;
+            width: 34px;
+        }
+
+        h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0px;
+        }
+
+        /* CSS Position: static(default), absolute, relative, fixed, sticky */
+        .container {
+            border: 2px solid #000;
+            background-color: khaki;
+            height: 344px;
+        }
+
+        .box {
+            display: inline-block;
+            border: 2px solid red;
+            height: 150px;
+            width: 150px;
+            margin: 2px;
+        }
+
+        #box3 {
+            /* relative: Position of the elements relative to its normal position and leave a gap at its normal position */
+            /* position: relative; */
+
+            /* absolute: Position of the elements relative to the position of its first parent */
+            /* position: absolute; */
+            /* top: 34px;
+            left: 134px; */
+
+            /* fixed: Position of the elements relative to the browser window */
+               /* position: fixed;
+               right: 4px;
+               bottom: 4px; */
+
+               /* sticky: Positions of the element relative to the */
+               position: sticky;
+               top: 3px;
+        }
+    </style>
+
+    <!-- This is how we include external css -->
+    <link rel="stylesheet" href="pratham.css">
+
+    <!-- This is how we include external JavaScript -->
+    <script src="pratham.js"></script>
+
+</head>
+
+<body>
+    <!-- Position Property -->
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Chat</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <!-- Display Property -->
+    <header class="top"><img src="https://wallpapercave.com/wp/wp7360559.jpg" alt="">
+        <h3>Welcome to My page</h3>
+    </header>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <div class="search"><input type="text" name="search" id="search" placeholder="Search this website"></div>
+        </ul>
+    </nav>
+    <!-- Button -->
+    <a href="https://www.google.com" class="btn">Read More</a>
+    <button class="btn">Contact Us</button>
+    <!-- Head -->
+    <h1>Pratham Jain</h1>
+    <h2>Pratham Jain</h2>
+    <h3>Pratham Jain</h3>
+    <h4>Pratham Jain</h4>
+    <h5>Pratham Jain</h5>
+    <h6>Pratham Jain</h6>
+
+    <!-- Para -->
+    <!-- Inline CSS -->
+    <p style="color: red; background-color: yellow;">Lorem ipsum dolor sit. <br> Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Molestias excepturi
+        <hr> quod, iste amet ratione non necessitatibus voluptatem incidunt <strong>This is strong</strong> perferendis
+        doloremque doloribus cum, sit magni soluta sequi velit atque sed! Accusantium ipsa voluptates corporis <em>This
+            is emphazied</em> veniam placeat reiciendis in quisquam reprehenderit tempore.
+    </p>
+    <p id="secondPara" class="redElement bgBlue">second paragraph</p>
+
+    <!-- Img -->
+    <a href="https://google.com" target="blank">google</a><br>
+    <a href="https://twitter.com" target="blank">twitter</a><br>
+    <a href="https://linkedin.com" target="blank">linkedin</a><br>
+    <img src="google.com" alt="Error loading image">
+
+    <!-- List -->
+    <ul type="disc">
+        <li>This is first unordered list</li>
+        <li>
+            <ul>
+                <li>Another one</li>
+                <li>Another two</li>
+                <li>Another three</li>
+            </ul>
+        </li>
+        <li>This is second unordered list</li>
+        <li>This is third unordered list</li>
+    </ul>
+    <ol type="1">
+        <li>This is first ordered list</li>
+        <li>This is second ordered list</li>
+        <li>This is third ordered list</li>
+    </ol>
+
+    <!-- Tables -->
+    <h3>HTML Table</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Employee Id</th>
+                <th>Employee Role</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pratham</td>
+                <td>7140133</td>
+                <td>ASC</td>
+            </tr>
+            <tr>
+                <td>Prerit</td>
+                <td>7140129</td>
+                <td>PSD</td>
+            </tr>
+            <tr>
+                <td>Gourav</td>
+                <td>7140107</td>
+                <td>ASC</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Forms -->
+    <h2>This is the HTML forms</h2>
+    <form action="backend.php">
+        <label for="name"> Name </label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+        <div>
+            Role: <input type="text" name="myRole">
+        </div>
+        <br>
+        <div>
+            Email: <input type="email" name="myEmail">
+        </div>
+        <br>
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        <div>
+            Are you eligible?: <input type="checkbox" name="myEligibility" checked>
+        </div>
+        <br>
+        <div>
+            Gender: Male <input type="radio" name="myGender">
+            Female <input type="radio" name="myGender">
+            Other <input type="radio" name="myGender">
+        </div>
+        <br>
+        <div>
+            Write about yourself: <br><textarea name="myText" cols="30" rows="10"></textarea>
+        </div>
+        <br>
+        <div>
+            <label for="car"> Car </label>
+            <select name="myCar" id="car">
+                <option value="nex" selected> Nexon </option>
+                <option value="ver"> Verna </option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+    </form>
+
+    <!-- Id and classes -->
+    <!-- . is for class and # is for id -->
+    <span id="myid"></span>
+    <span class="redBG"></span>
+    <!-- Emmet takes div tag as default -->
+    <div class="redBG blackBorder anotherClass"></div>
+    <!-- Creating multiple comments using Emmet -->
+    <!-- span.class1.class2.class3*4 to print similar elements usinjg Emmet -->
+    <span class="class1 class2 class3">First</span>
+    <span class="class1 class2 class3">Second</span>
+    <span class="class1 class2 class3">Third</span>
+    <!-- HTML Entities -->
+    <div class="container">
+        <p>This is another &nbsp; &nbsp; paragraph with 2 spaces</p>
+        <p>Paragraph is written like this &lt;p&gt;</p>
+        <p>Pound is written like this &pound;</p>
+        <p>Copyright is written like this &copy;</p>
+        <p>Another character is &rArr;</p>
+        <p>Another character is &frac14;</p>
+        <p>Empty character is written like this &#8203;</p>
+    </div>
+
+    <!-- HTML Semantic Elements -->
+    <details>
+        <summary>HTML ended</summary>HTML ended HTML ended HTML ended HTML ended Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Adipisci, voluptate.
+    </details>
+    <footer>This is footer</footer>
+</body>
+
+</html>
